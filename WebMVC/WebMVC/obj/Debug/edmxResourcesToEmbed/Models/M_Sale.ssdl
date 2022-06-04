@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SE.T6C4Lab2.dbo.Agent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Agent">
+    <Key>
+      <PropertyRef Name="AgentID" />
+      <PropertyRef Name="AgentName" />
+      <PropertyRef Name="AgentAddress" />
+    </Key>
+    <Property Name="AgentID" Type="text" Nullable="false" />
+    <Property Name="AgentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AgentAddress" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SE.T6C4Lab2.dbo.Item' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="ItemName" />
+      <PropertyRef Name="Size" />
+    </Key>
+    <Property Name="ItemID" Type="text" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Size" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SE.T6C4Lab2.dbo.Order' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OderID" />
+      <PropertyRef Name="OrderDate" />
+      <PropertyRef Name="AgentID" />
+    </Key>
+    <Property Name="OderID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AgentID" Type="text" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SE.T6C4Lab2.dbo.OrderDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="UnitAmount" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemID" Type="text" Nullable="false" />
+    <Property Name="Quantity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UnitAmount" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_TestModelStoreContainer">
+    <EntitySet Name="Agent" EntityType="Self.Agent" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Agent].[AgentID] AS [AgentID], 
+    [Agent].[AgentName] AS [AgentName], 
+    [Agent].[AgentAddress] AS [AgentAddress]
+    FROM [dbo].[Agent] AS [Agent]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Item" EntityType="Self.Item" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Item].[ItemID] AS [ItemID], 
+    [Item].[ItemName] AS [ItemName], 
+    [Item].[Size] AS [Size]
+    FROM [dbo].[Item] AS [Item]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Order" EntityType="Self.Order" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Order].[OderID] AS [OderID], 
+    [Order].[OrderDate] AS [OrderDate], 
+    [Order].[AgentID] AS [AgentID]
+    FROM [dbo].[Order] AS [Order]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OrderDetail].[ID] AS [ID], 
+    [OrderDetail].[OrderID] AS [OrderID], 
+    [OrderDetail].[ItemID] AS [ItemID], 
+    [OrderDetail].[Quantity] AS [Quantity], 
+    [OrderDetail].[UnitAmount] AS [UnitAmount]
+    FROM [dbo].[OrderDetail] AS [OrderDetail]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

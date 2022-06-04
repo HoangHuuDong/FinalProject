@@ -1,0 +1,187 @@
+﻿@{
+    ViewBag.Title = "Agent";
+}
+<style type="text/css">
+.table&amp;amp;gt;tbody&amp;amp;gt;tr&amp;amp;gt;td, .table&amp;amp;gt;tfoot&amp;amp;gt;tr&amp;amp;gt;td {
+vertical-align: middle;
+}
+
+.actions .btn {
+width:36%;
+margin:1.5em 0;
+}
+
+.actions .btn-info {
+float:left;
+}
+
+.actions .btn-danger {
+float:right;
+}
+
+table#cart thead {
+display: none;
+}
+
+table#cart tbody td {
+display: block;
+padding: .6rem;
+min-width:320px;
+}
+
+table#cart tbody tr td:first-child {
+background: #333;
+color: #fff;
+}
+
+table#cart tbody td:before {
+content: attr(data-th);
+font-weight: bold;
+display: inline-block;
+width: 8rem;
+}
+
+table#cart tfoot td {
+display:block;
+}
+table#cart tfoot td .btn {
+display:block;
+}
+}</style>
+<div class="container">
+    <table id="cart" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th style="width:50%">Tên sản phẩm</th>
+                <th style="width:10%">Giá</th>
+                <th style="width:8%">Số lượng</th>
+                <th style="width:22%" class="text-center">Thành tiền</th>
+                <th style="width:10%"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs">
+                            <img src="https://minhcaumart.vn/media/com_eshop/products/8934822101336.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+                        </div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">Bia Lon Tiger</h4>
+                            <p>Thức uống giải khát mùa hè</p>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price">25.000 đ</td>
+                <td data-th="Quantity">
+                    <input onclick="thaydoi()" id="sl" class="form-control text-center" value="1" type="number">
+                </td>
+                <td id="total" data-th="Subtotal" class="total text-center">25000đ</td>
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs">
+                            <img src="https://minhcaumart.vn/media/com_eshop/products/8934588012228%201.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+                        </div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">Pepsi Lon</h4>
+                            <p>Thức uống giải khát mùa hè</p>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price">20.000 đ</td>
+                <td data-th="Quantity">
+                    <input onclick="thaydoi()" id="sl2" class="form-control text-center" value="1" type="number">
+                </td>
+                <td id="total2" data-th="Subtotal" class="total2 text-center">20000đ</td>
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs">
+                            <img src="https://csfood.vn/wp-content/uploads/2016/07/N%C6%B0%E1%BB%9Bc-gi%E1%BA%A3i-kh%C3%A1t-Coca-Cola-lon-250ml.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+                        </div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">Cocacola Lon</h4>
+                            <p>Thức uống giải khát mùa hè</p>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price">20.000 đ</td>
+                <td data-th="Quantity">
+                    <input onclick="thaydoi()" id="sl3" class="form-control text-center" value="1" type="number">
+                </td>
+                <td id="total3" data-th="Subtotal" class="total3 text-center">20000đ</td>
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="visible-xs">
+                <td class="text-center">
+                    <strong></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img height="100px" src="https://play-lh.googleusercontent.com/dQbjuW6Jrwzavx7UCwvGzA_sleZe3-Km1KISpMLGVf1Be5N6hN6-tdKxE5RDQvOiGRg" />
+                    <img height="100px" src="https://play-lh.googleusercontent.com/yHmIm7FYKe_dW2WHTwWizp2p_gt7_ctdpCUevX654E1dsj5c9McWO03k_S6PPLG_DNz7" />
+                    <img height="100px" src="https://cdn.vietnambiz.vn/171464876016439296/2020/4/27/photo-1587963185488-15879631875371560441241.png" />
+                </td>
+                <td colspan="2" class="hidden-xs"> </td>
+                <td class=" hidden-xs text-center">
+                    <strong class="total4">Tổng tiền 500.000 đ</strong>
+                </td>
+                <td>
+                    <a href="" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    var a = document.getElementById("sl").value
+    var b = document.getElementById("sl2").value
+    var c = document.getElementById("sl3").value
+
+    function tong() {
+        var tong = a * 25000;
+        var tong2 = b * 20000;
+        var tong3 = c * 20000;
+        var tong4 = tong + tong2 + tong3;
+        $(".total").text(tong + "đ");
+        $(".total2").text(tong2 + "đ");
+        $(".total3").text(tong3 + "đ");
+        $(".total4").text("Tồng tiền  "+ tong4 + "đ");
+    }
+    function thaydoi() {
+        a = document.getElementById("sl").value
+        b = document.getElementById("sl2").value
+        c = document.getElementById("sl3").value
+        tong()
+    }
+    console.log(a)
+</script>

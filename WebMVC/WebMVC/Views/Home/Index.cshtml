@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="background-image: url('https://media.istockphoto.com/photos/flying-shopping-cart-with-shopping-bags-on-a-pink-background-picture-id1292443598?k=20&m=1292443598&s=170667a&w=0&h=8VnuyidOGJ1_7pxH5uXp_yqYaS72UyUFZtNy7MSz_oc=');
+        height: 300px;
+        width: auto;
+        color: white;
+        object-fit: cover;
+    "
+     class="jumbotron text-center">
+    <h1>SHOPPING ONLINE</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="cards">
+            <div class="card">
+                <img class="card-image" width="100px" src="https://minhcaumart.vn/media/com_eshop/products/8934822101336.jpg" />
+
+                <div class="card-content">
+                    <h3 class="card-title">
+                         Tiger
+                    </h3>
+                </div>
+                <div class="dongia">
+                    <h4 class="dongia">
+                        25.000d
+                    </h4>
+                </div>
+                <button type="button" class="btn">
+                    @Html.ActionLink("Purchase", "Purchase", "Home")
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="cards">
+            <div class="card">
+                <img class="card-image" width="100px" src="https://minhcaumart.vn/media/com_eshop/products/8934588012228%201.jpg" />
+
+                <div class="card-content">
+                    <h3 class="card-title">
+                        Pepsi
+                    </h3>
+                </div>
+                <div class="dongia">
+                    <h4 class="dongia">
+                        20.000d
+                    </h4>
+                </div>
+                <button type="button" class="btn">
+                    @Html.ActionLink("Purchase", "Purchase", "Home")
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="cards">
+            <div class="card">
+                <img class="card-image" width="100px" src="https://csfood.vn/wp-content/uploads/2016/07/N%C6%B0%E1%BB%9Bc-gi%E1%BA%A3i-kh%C3%A1t-Coca-Cola-lon-250ml.jpg"/>
+
+                <div class="card-content">
+                    <h3 class="card-title">
+                        CocaCola
+                    </h3>
+                </div>
+                <div class="dongia">
+                    <h4 class="dongia">
+                        20.000d
+                    </h4>
+                </div>
+                <button type="button" class="btn">
+                    @Html.ActionLink("Purchase", "Purchase", "Home")
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
